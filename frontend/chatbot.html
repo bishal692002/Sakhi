@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakhi - AI Health Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="sakhi.png" alt="Sakhi Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links" id="nav-menu">
+                <!-- Navigation links will be dynamically inserted based on login status -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>AI Health Assistant</h1>
+            <p>Get answers to your health questions from Sakhi's AI assistant</p>
+        </div>
+    </section>
+
+    <section class="chatbot-section">
+        <div class="container">
+            <div class="chatbot-card">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chat-info">
+                        <h3>Sakhi Assistant</h3>
+                        <span class="status online">Online</span>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>Hi there! I'm Sakhi's health assistant. I'm here to answer your questions about menstrual health, period symptoms, and general wellbeing. How can I help you today?</p>
+                        </div>
+                        <div class="message-time">Just now</div>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <div class="suggestion-chips" id="suggestion-chips">
+                        <button class="suggestion-chip">Period pain relief</button>
+                        <button class="suggestion-chip">PMS symptoms</button>
+                        <button class="suggestion-chip">Irregular periods</button>
+                        <button class="suggestion-chip">Exercise during period</button>
+                    </div>
+                    
+                    <div class="input-container">
+                        <textarea id="user-input" placeholder="Type your question here..." rows="1"></textarea>
+                        <button id="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-info">
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> About this AI Assistant</h3>
+                    <p>This AI assistant uses Google's Gemini API to provide helpful information about menstrual health. Please note:</p>
+                    <ul>
+                        <li>The assistant provides general information, not medical advice</li>
+                        <li>Always consult a healthcare provider for medical concerns</li>
+                        <li>Your conversations are private and secure</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-lightbulb"></i> Suggested Topics</h3>
+                    <ul class="topic-list">
+                        <li><a href="#" class="topic-link">Managing period cramps</a></li>
+                        <li><a href="#" class="topic-link">Cycle irregularities</a></li>
+                        <li><a href="#" class="topic-link">Nutrition during menstruation</a></li>
+                        <li><a href="#" class="topic-link">Mental health & hormones</a></li>
+                        <li><a href="#" class="topic-link">Exercise recommendations</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">© 2025 Sakhi – Built with ❤️ for every woman.</p>
+    </footer>
+
+    <script type="module" src="js/chatbot.js"></script>
+</body>
+</html>

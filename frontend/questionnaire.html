@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakhi - Health Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="sakhi.png" alt="Sakhi Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Health Questionnaire</h1>
+            <p>Tell us how you're feeling to get personalized health insights</p>
+        </div>
+    </section>
+
+    <section class="questionnaire-section">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress" id="questionnaire-progress"></div>
+                <div class="steps">
+                    <div class="step active" data-step="1">1</div>
+                    <div class="step" data-step="2">2</div>
+                    <div class="step" data-step="3">3</div>
+                    <div class="step" data-step="4">4</div>
+                </div>
+            </div>
+
+            <div class="questionnaire-container">
+                <!-- Step 1: Basic Info -->
+                <div class="question-step active" id="step-1">
+                    <h2>Let's start with the basics</h2>
+                    
+                    <div class="form-group">
+                        <label>Are you currently on your period?</label>
+                        <div class="option-buttons">
+                            <button class="option-btn" data-value="yes">Yes</button>
+                            <button class="option-btn" data-value="no">No</button>
+                            <button class="option-btn" data-value="unsure">Not Sure</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How many days until your next expected period?</label>
+                        <div class="range-slider">
+                            <input type="range" min="0" max="28" value="14" class="slider" id="days-to-period">
+                            <output for="days-to-period" id="days-output">14 days</output>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-buttons">
+                        <button class="primary-btn next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Physical Symptoms -->
+                <div class="question-step" id="step-2">
+                    <h2>Physical Symptoms</h2>
+                    
+                    <div class="form-group">
+                        <label>Rate your cramp severity today:</label>
+                        <div class="option-buttons">
+                            <button class="option-btn" data-value="none">None</button>
+                            <button class="option-btn" data-value="mild">Mild</button>
+                            <button class="option-btn" data-value="moderate">Moderate</button>
+                            <button class="option-btn" data-value="severe">Severe</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Which physical symptoms are you experiencing? (Select all that apply)</label>
+                        <div class="checkbox-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="headache"> Headache
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="backache"> Back Pain
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="bloating"> Bloating
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="fatigue"> Fatigue
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="breast_tenderness"> Breast Tenderness
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="nausea"> Nausea
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How is your energy level today?</label>
+                        <div class="option-buttons">
+                            <button class="option-btn" data-value="low">Very Low</button>
+                            <button class="option-btn" data-value="below_average">Below Average</button>
+                            <button class="option-btn" data-value="average">Average</button>
+                            <button class="option-btn" data-value="good">Good</button>
+                            <button class="option-btn" data-value="excellent">Excellent</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-buttons">
+                        <button class="secondary-btn back-btn">Back</button>
+                        <button class="primary-btn next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Mood & Mental State -->
+                <div class="question-step" id="step-3">
+                    <h2>Mood & Mental State</h2>
+                    
+                    <div class="form-group">
+                        <label>How would you describe your mood today?</label>
+                        <div class="option-buttons mood-options">
+                            <button class="option-btn" data-value="happy">😊 Happy</button>
+                            <button class="option-btn" data-value="calm">😌 Calm</button>
+                            <button class="option-btn" data-value="sad">😔 Sad</button>
+                            <button class="option-btn" data-value="anxious">😰 Anxious</button>
+                            <button class="option-btn" data-value="irritable">😠 Irritable</button>
+                            <button class="option-btn" data-value="neutral">😐 Neutral</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Are you experiencing any of these feelings? (Select all that apply)</label>
+                        <div class="checkbox-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="mood_swings"> Mood Swings
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="cravings"> Food Cravings
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="concentration"> Trouble Concentrating
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="overwhelmed"> Feeling Overwhelmed
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="motivation"> Lack of Motivation
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How well did you sleep last night?</label>
+                        <div class="option-buttons">
+                            <button class="option-btn" data-value="very_poor">Very Poor</button>
+                            <button class="option-btn" data-value="poor">Poor</button>
+                            <button class="option-btn" data-value="average">Average</button>
+                            <button class="option-btn" data-value="good">Good</button>
+                            <button class="option-btn" data-value="excellent">Excellent</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-buttons">
+                        <button class="secondary-btn back-btn">Back</button>
+                        <button class="primary-btn next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Lifestyle -->
+                <div class="question-step" id="step-4">
+                    <h2>Lifestyle Factors</h2>
+                    
+                    <div class="form-group">
+                        <label>Did you exercise in the last 24 hours?</label>
+                        <div class="option-buttons">
+                            <button class="option-btn" data-value="none">No</button>
+                            <button class="option-btn" data-value="light">Light (walking, stretching)</button>
+                            <button class="option-btn" data-value="moderate">Moderate (yoga, cycling)</button>
+                            <button class="option-btn" data-value="intense">Intense (running, HIIT)</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>How would you rate your stress level today?</label>
+                        <div class="option-buttons">
+                            <button class="option-btn" data-value="low">Low</button>
+                            <button class="option-btn" data-value="moderate">Moderate</button>
+                            <button class="option-btn" data-value="high">High</button>
+                            <button class="option-btn" data-value="severe">Severe</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Are there any specific concerns you'd like help with?</label>
+                        <textarea id="concerns" rows="3" placeholder="Type your concerns here..."></textarea>
+                    </div>
+                    
+                    <div class="nav-buttons">
+                        <button class="secondary-btn back-btn">Back</button>
+                        <button class="primary-btn submit-btn">Get Personalized Results</button>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="question-step results-step" id="results">
+                    <div class="results-header">
+                        <h2>Your Personalized Health Insights</h2>
+                        <p>Based on your responses, we've prepared these recommendations for you</p>
+                    </div>
+                    
+                    <div class="results-content" id="results-content">
+                        <!-- Will be filled via JavaScript -->
+                    </div>
+                    
+                    <div class="results-actions">
+                        <a href="chatbot.html" class="primary-btn">Chat with Health Assistant</a>
+                        <button class="secondary-btn" id="restart-btn">Retake Questionnaire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">© 2025 Sakhi – Built with ❤️ for every woman.</p>
+    </footer>
+
+    <script type="module" src="js/questionnaire.js"></script>
+</body>
+</html>

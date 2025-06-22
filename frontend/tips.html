@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakhi - Health Tips</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="sakhi.png" alt="Sakhi Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Health Tips</h1>
+            <p>Expert advice for your menstrual health and wellbeing</p>
+        </div>
+    </section>
+
+    <section class="tips-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">All Tips</button>
+                <button class="tab-btn" data-category="period">During Period</button>
+                <button class="tab-btn" data-category="pms">PMS</button>
+                <button class="tab-btn" data-category="nutrition">Nutrition</button>
+                <button class="tab-btn" data-category="exercise">Exercise</button>
+                <button class="tab-btn" data-category="mental">Mental Wellbeing</button>
+            </div>
+
+            <div class="tips-grid" id="tips-container">
+                <!-- Each tip card -->
+                <div class="tip-card" data-categories="period nutrition">
+                    <div class="tip-icon"><i class="fas fa-water"></i></div>
+                    <h3>Stay Hydrated</h3>
+                    <p>Drinking plenty of water during your period helps reduce bloating and alleviate cramps. Aim for at least 8 glasses a day.</p>
+                </div>
+
+                <div class="tip-card" data-categories="period">
+                    <div class="tip-icon"><i class="fas fa-hot-tub"></i></div>
+                    <h3>Heat Therapy</h3>
+                    <p>Apply a heating pad to your lower abdomen or lower back to relieve menstrual cramps. The heat helps relax the contracting muscles.</p>
+                </div>
+
+                <div class="tip-card" data-categories="exercise period">
+                    <div class="tip-icon"><i class="fas fa-yoga"></i></div>
+                    <h3>Gentle Yoga</h3>
+                    <p>Practicing gentle yoga poses like child's pose, cat-cow, and butterfly can help ease period pain and improve circulation.</p>
+                </div>
+
+                <div class="tip-card" data-categories="nutrition pms">
+                    <div class="tip-icon"><i class="fas fa-apple-alt"></i></div>
+                    <h3>Iron-Rich Foods</h3>
+                    <p>Combat fatigue during your period by consuming iron-rich foods like spinach, lentils, tofu, and lean meats.</p>
+                </div>
+
+                <div class="tip-card" data-categories="pms mental">
+                    <div class="tip-icon"><i class="fas fa-bed"></i></div>
+                    <h3>Prioritize Sleep</h3>
+                    <p>Getting 7-9 hours of quality sleep can significantly reduce PMS symptoms and improve your mood during your cycle.</p>
+                </div>
+
+                <div class="tip-card" data-categories="nutrition pms">
+                    <div class="tip-icon"><i class="fas fa-coffee"></i></div>
+                    <h3>Limit Caffeine</h3>
+                    <p>Reducing caffeine intake before and during your period can help decrease breast tenderness, anxiety, and insomnia.</p>
+                </div>
+
+                <div class="tip-card" data-categories="exercise mental">
+                    <div class="tip-icon"><i class="fas fa-walking"></i></div>
+                    <h3>Regular Exercise</h3>
+                    <p>Engaging in regular moderate exercise can help reduce cramps, boost your mood, and improve overall menstrual health.</p>
+                </div>
+
+                <div class="tip-card" data-categories="mental">
+                    <div class="tip-icon"><i class="fas fa-breath"></i></div>
+                    <h3>Deep Breathing</h3>
+                    <p>Practice deep breathing exercises to reduce stress and tension, which can worsen PMS symptoms and period pain.</p>
+                </div>
+
+                <div class="tip-card" data-categories="nutrition">
+                    <div class="tip-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Magnesium-Rich Foods</h3>
+                    <p>Include magnesium-rich foods like dark chocolate, bananas, and nuts to help reduce cramps and improve sleep.</p>
+                </div>
+
+                <div class="tip-card" data-categories="period">
+                    <div class="tip-icon"><i class="fas fa-pump-medical"></i></div>
+                    <h3>Menstrual Products</h3>
+                    <p>Explore different menstrual products like cups, organic tampons, or period underwear to find what works best for your comfort and lifestyle.</p>
+                </div>
+
+                <div class="tip-card" data-categories="mental pms">
+                    <div class="tip-icon"><i class="fas fa-journal-whills"></i></div>
+                    <h3>Track Your Symptoms</h3>
+                    <p>Regularly tracking your symptoms helps identify patterns and empowers you to prepare for and manage your unique cycle experience.</p>
+                </div>
+
+                <div class="tip-card" data-categories="nutrition">
+                    <div class="tip-icon"><i class="fas fa-capsules"></i></div>
+                    <h3>Consider Supplements</h3>
+                    <p>Calcium, vitamin D, B6, and omega-3 supplements may help reduce PMS symptoms when combined with a balanced diet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="questionnaire-preview">
+        <div class="container">
+            <h2>How are you feeling today?</h2>
+            <p>Take our quick health questionnaire to get personalized tips based on your current symptoms.</p>
+            <a href="questionnaire.html" class="primary-btn">Start Questionnaire</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">© 2025 Sakhi – Built with ❤️ for every woman.</p>
+    </footer>
+
+    <script type="module" src="js/tips.js"></script>
+</body>
+</html>

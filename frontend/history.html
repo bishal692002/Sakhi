@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakhi - Period History</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="sakhi.png" alt="Sakhi Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="history.html" class="active">History</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="chatbot.html">Health Assistant</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="welcome-section">
+        <div class="container">
+            <h2>Your Period History</h2>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="container">
+            <div class="history-filter">
+                <h3>Filter History</h3>
+                <div class="form-group date-range">
+                    <label for="start-date">From:</label>
+                    <input type="date" id="start-date">
+                    
+                    <label for="end-date">To:</label>
+                    <input type="date" id="end-date">
+                    
+                    <button id="filter-btn" class="secondary-btn">Apply Filter</button>
+                </div>
+            </div>
+
+            <div class="history-list" id="history-list">
+                <!-- History items will be dynamically inserted here -->
+                <div class="loading">Loading your history...</div>
+            </div>
+            
+            <div class="history-template hidden">
+                <div class="history-item">
+                    <div class="history-date">
+                        <span class="month">Jan</span>
+                        <span class="day">10</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="history-details">
+                        <h4>Period Start</h4>
+                        <p>Cycle length: <span class="cycle-length">28</span> days</p>
+                        <p>Period length: <span class="period-length">5</span> days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="no-data" class="no-data hidden">
+                <p>No period data found for the selected date range.</p>
+                <a href="dashboard.html" class="primary-btn">Add Period Data</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">© 2025 Sakhi – Built with ❤️ for every woman.</p>
+    </footer>
+
+    <script type="module" src="js/history.js"></script>
+</body>
+</html>

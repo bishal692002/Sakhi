@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakhi - Reports & Insights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="sakhi.png" alt="Sakhi Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="reports.html" class="active">Reports</a></li>
+                <li><a href="chatbot.html">Health Assistant</a></li>
+                <li><a href="#" id="logout-btn" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="welcome-section">
+        <div class="container">
+            <h2>Your Health Insights</h2>
+        </div>
+    </section>
+
+    <section class="reports-section">
+        <div class="container">
+            <div class="reports-grid">
+                <div class="report-card">
+                    <h3>Cycle Analysis</h3>
+                    <div class="chart-container">
+                        <canvas id="cycleChart"></canvas>
+                    </div>
+                    <div class="chart-details">
+                        <p>Your average cycle length: <span id="avg-cycle-length">28</span> days</p>
+                        <p>Shortest cycle: <span id="min-cycle-length">26</span> days</p>
+                        <p>Longest cycle: <span id="max-cycle-length">32</span> days</p>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <h3>Symptoms Overview</h3>
+                    <div class="chart-container">
+                        <canvas id="symptomsChart"></canvas>
+                    </div>
+                    <div class="chart-details">
+                        <p>Most common symptom: <span id="common-symptom">Cramps</span></p>
+                        <p>Most frequent mood: <span id="common-mood">Neutral</span></p>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <h3>Mood Patterns</h3>
+                    <div class="chart-container">
+                        <canvas id="moodChart"></canvas>
+                    </div>
+                    <div class="chart-details">
+                        <p>Your mood often changes <span id="mood-timing">3-5</span> days before your period</p>
+                    </div>
+                </div>
+
+                <div class="report-card">
+                    <h3>Health Recommendations</h3>
+                    <div class="recommendations" id="recommendations-list">
+                        <div class="recommendation-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <p>Your cycle is regular. Keep tracking for more personalized insights.</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <i class="fas fa-apple-alt"></i>
+                            <p>Based on your symptoms, consider increasing iron intake during your period.</p>
+                        </div>
+                        <div class="recommendation-item">
+                            <i class="fas fa-running"></i>
+                            <p>Light exercise may help with the cramps you commonly report.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-data-reports hidden" id="no-data-reports">
+                <p>We don't have enough data to generate reports yet. Add at least 3 months of period data.</p>
+                <a href="dashboard.html" class="primary-btn">Add Period Data</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Privacy</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">© 2025 Sakhi – Built with ❤️ for every woman.</p>
+    </footer>
+
+    <script type="module" src="js/reports.js"></script>
+</body>
+</html>
